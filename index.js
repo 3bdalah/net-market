@@ -14,6 +14,8 @@ const init = async () => {
 
     setupStore(products);
     console.log('store in index page  :' , store);
+    const featured = store.filter((product) => product.featured === true);
+    console.log('featured',  featured);
 };
 
 window.addEventListener('DOMContentLoaded',init);
